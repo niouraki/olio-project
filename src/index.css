@@ -1,14 +1,126 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.navbar {
+  height: 10vh;
+  background-color: #00A69C;
 }
+
+.nav-list {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 3.5vh;
+}
+
+.nav-item{
+  display: inline-block;
+  margin: 0 50px;
+  color: #FFF;
+}
+
+.nav-logo {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: 0 0 10px #ED522E;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav-home {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+.grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-row-gap: 50px;
+ justify-items: center;
+ align-items: center;
+ background-color: #F6F4E7;
+ margin: 0 250px;
+ font-family: 'Montserrat', sans-serif;
+ padding: 20px 0;
+}
+
+.post {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  width: 400px;
+  color: #4A4A4A;
+}
+
+.seen {
+  color: #00A69C;
+  visibility: visible;
+}
+
+.not-seen {
+  visibility: hidden;
+}
+
+.list-photo {
+  height: 300px;
+  width: 400px;
+  border: 3px solid #00A69C;
+}
+
+.list-location {
+  padding: 8px 0;
+}
+
+.list-btn {
+  background-color: #00A69C;
+  font-size: 18px;
+  padding: 8px 10px;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 1s;
+}
+
+.list-btn:hover {
+  background-color: transparent;
+  color: #00A69C;
+  border: 2px solid #00A69C;
+}
+
+.single-post {
+  text-align: center;
+  position: relative;
+  top: 5vh;
+  border: 2px solid #00A69C;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.leaflet-container {
+  height: 400px;
+}
+
+.single-post p {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 0;
+}
+
+.single-post span {
+  font-weight: bold;
+}
+
+.single-post button {
+  margin-bottom: 5px;
+}
+
