@@ -6,11 +6,10 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+/*navbar styling*/
 .navbar {
   height: 10vh;
   background-color: #00A69C;
@@ -22,16 +21,16 @@ body {
   flex-direction: row;
   justify-content: space-between;
   top: 3.5vh;
+  padding: 0 15px;
 }
 
 .nav-item{
   display: inline-block;
-  margin: 0 50px;
   color: #FFF;
 }
 
 .nav-logo {
-  font-size: 40px;
+  font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
   text-shadow: 0 0 10px #ED522E;
@@ -40,27 +39,24 @@ body {
 
 .nav-home {
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
+/*home page styling*/
 .grid {
- display: grid;
- grid-template-columns: 1fr 1fr;
- grid-row-gap: 50px;
- justify-items: center;
- align-items: center;
  background-color: #F6F4E7;
- margin: 0 250px;
  font-family: 'Montserrat', sans-serif;
- padding: 20px 0;
+}
+
+.grid h2 {
+  padding-bottom: 5px;
 }
 
 .post {
   text-align: center;
-  background-color: white;
-  padding: 20px;
-  width: 400px;
+  width: 100vw;
   color: #4A4A4A;
+  padding: 25px 0;
 }
 
 .seen {
@@ -73,8 +69,8 @@ body {
 }
 
 .list-photo {
-  height: 300px;
-  width: 400px;
+  height: 40vh;
+  width: 80vw;
   border: 3px solid #00A69C;
 }
 
@@ -84,7 +80,7 @@ body {
 
 .list-btn {
   background-color: #00A69C;
-  font-size: 18px;
+  font-size: 16px;
   padding: 8px 10px;
   color: white;
   letter-spacing: 1px;
@@ -97,21 +93,23 @@ body {
   border: 2px solid #00A69C;
 }
 
+
+/*single post page styling*/
 .single-post {
   text-align: center;
   position: relative;
-  top: 5vh;
+  top: 2vh;
   border: 2px solid #00A69C;
-  width: 800px;
+  width: 90vw;
   margin: 0 auto;
 }
 
 .leaflet-container {
-  height: 400px;
+  height: 40vh;
 }
 
 .single-post p {
-  font-size: 16px;
+  font-size: 15px;
   font-family: 'Montserrat', sans-serif;
   padding: 5px 0;
 }
@@ -122,5 +120,68 @@ body {
 
 .single-post button {
   margin-bottom: 5px;
+}
+
+/*media queries*/
+@media screen and (min-width: 600px) {
+  .list-photo {
+    height: 40vh;
+    width: 60vw;
+  }
+
+  .list-btn {
+    font-size: 20px;
+  }
+
+  .single-post h2 {
+    font-size: 35px;
+    padding: 8px 0;
+  }
+  .single-post p {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .list-photo {
+    height: 40vh;
+    width: 40vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    grid-row-gap: 10px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .post {
+    padding: 20px;
+  }
+
+  .list-photo {
+    height: 300px;
+    width: 400px;
+  }
+
+  .single-post {
+    top: 3vh;
+    width: 750px;
+  }
+
+  .single-post p {
+    font-size: 17px;
+  }
+
+  .leaflet-container {
+    height: 350px;
+  }
+  
+  .list-btn {
+    font-size: 17px;
+  }
 }
 
